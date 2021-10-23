@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "958e1b17-bd90-4996-a340-f7a808403fa0",
+		"name": "Practice/Example1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"name\":\"Thomas abraham\",\r\n   \"email\":\"ta@gmail.com\",\r\n   \"password\":\"Thanos1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL1}}/register",
+					"host": [
+						"{{URL1}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"email\":\"ta@gmail.com\",\r\n   \"password\":\"Thanos1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL1}}/login",
+					"host": [
+						"{{URL1}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create post without login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"postTitle\":\"Heavy rains at south india\",\r\n\"description\":\"Heavy rainfall in Uttarakhand for the fourth consecutive day has led to chaos and disaster across the hilly state, with flooded roads and buildings, destroyed bridges and overflowing water bodies leaving locals and tourists stranded - some in remote and dangerous locations.\",\r\n\"category\":\"climate\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL1}}/post/posts",
+					"host": [
+						"{{URL1}}"
+					],
+					"path": [
+						"post",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all post without login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Create post with login/authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzI1N2VmYTViOTNiOGZlNTE5YzMwNSIsImlhdCI6MTYzNDkxMzA0NCwiZXhwIjoxNjM1MDg1ODQ0fQ.ZN53XYdI3CRqe4iUqsMtQ7YZHssAb4AWueGrf2ErqpM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"postTitle\":\"Facebook Messenger gets new AR Group Effects for video calls and rooms\",\r\n\"description\":\"Facebook Messenger is getting a new Group Effects feature for video calls and Messenger Rooms. The new Group Effects introduces new AR filters and other effects that can be applied to everyone on a video call, at the same time.\",\r\n\"category\":\"Technology\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL1}}/post/posts",
+					"host": [
+						"{{URL1}}"
+					],
+					"path": [
+						"post",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all post with login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Show all my posts only",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
